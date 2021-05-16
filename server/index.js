@@ -1,15 +1,15 @@
 const express = require('express')
 const cors = require('cors')
 const path = require('path');
+const route = require('./routers/Index.router')
 const app = express();
 require('./db/mongoose');
-const route = require('./routers/Index.router')
 
 const PORT = process.env.PORT || 5000;
 
 
 
-app.use(express.json({ limit: "5mb" }))
+app.use(express.json())
 app.use(cors())
 app.use('/api', route);
 
