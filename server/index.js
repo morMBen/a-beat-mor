@@ -7,8 +7,6 @@ const route = require('./routers/Index.router')
 
 const PORT = process.env.PORT || 5000;
 
-require('dotenv').config()
-
 
 
 app.use(express.json({ limit: "5mb" }))
